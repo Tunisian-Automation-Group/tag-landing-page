@@ -342,7 +342,7 @@ img, svg { display: block; max-width: 100%; }
 
 .hero__headline {
   font-family: var(--font-display);
-  font-size: clamp(2.8rem, 6vw, 5.2rem);
+  font-size: clamp(1.9rem, 6vw, 5.2rem);
   font-weight: 800;
   line-height: 1.03;
   margin-bottom: var(--space-4);
@@ -875,7 +875,6 @@ img, svg { display: block; max-width: 100%; }
 .demo-zap__arrow--split {
   width: 32px;
   align-self: stretch;
-  margin: 4px 0;
 }
 .demo-zap__arrow--split svg {
   width: 100%;
@@ -883,40 +882,13 @@ img, svg { display: block; max-width: 100%; }
 }
 .demo-zap__line-svg {
   fill: none;
-  stroke: rgba(0,229,255,0.3);
+  stroke: rgba(0,229,255,0.35);
   stroke-width: 1.5;
-  stroke-dasharray: 5 5;
-  animation: demo-zap-dash 1.2s linear infinite;
+  stroke-dasharray: 5 4;
+  animation: demo-zap-dash 1.5s linear infinite;
 }
-@keyframes demo-zap-dash {
-  to { stroke-dashoffset: -10; }
-}
-.demo-zap__head-svg {
-  fill: rgba(0,229,255,0.75);
-}
-.demo-zap__packet-svg {
-  fill: var(--color-cyan);
-  filter: drop-shadow(0 0 4px rgba(0,229,255,0.9));
-  animation: demo-zap-svg-top 4s cubic-bezier(0.5, 0, 0.5, 1) infinite;
-}
-.demo-zap__packet-svg--bot { animation-name: demo-zap-svg-bot; }
-
-@keyframes demo-zap-svg-top {
-  0%, 35%  { transform: translate(2px, 50px); opacity: 0; }
-  40%      { opacity: 1; }
-  65%      { transform: translate(20px, 50px); opacity: 1; }
-  85%      { transform: translate(38px, 30px); opacity: 1; }
-  90%      { opacity: 0; }
-  100%     { transform: translate(38px, 30px); opacity: 0; }
-}
-@keyframes demo-zap-svg-bot {
-  0%, 35%  { transform: translate(2px, 50px); opacity: 0; }
-  40%      { opacity: 1; }
-  65%      { transform: translate(20px, 50px); opacity: 1; }
-  85%      { transform: translate(38px, 70px); opacity: 1; }
-  90%      { opacity: 0; }
-  100%     { transform: translate(38px, 70px); opacity: 0; }
-}
+@keyframes demo-zap-dash { to { stroke-dashoffset: -9; } }
+.demo-zap__head-svg { fill: rgba(0,229,255,0.75); }
 
 .demo-zap__stack {
   flex: 1;
@@ -2288,9 +2260,163 @@ img, svg { display: block; max-width: 100%; }
 }
 
 /* =====================================================
+   13.5 Mobile nav hamburger
+   ===================================================== */
+.nav__toggle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 36px; height: 36px;
+  padding: 6px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+.nav__toggle span {
+  display: block;
+  height: 1.5px;
+  background: var(--color-text-primary);
+  border-radius: 2px;
+  transition: transform 0.2s, opacity 0.2s;
+}
+.nav__toggle[aria-expanded="true"] span:nth-child(1) {
+  transform: translateY(6.5px) rotate(45deg);
+}
+.nav__toggle[aria-expanded="true"] span:nth-child(2) {
+  opacity: 0;
+}
+.nav__toggle[aria-expanded="true"] span:nth-child(3) {
+  transform: translateY(-6.5px) rotate(-45deg);
+}
+
+/* Mobile: nav links hidden until toggled */
+.nav__links {
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0;
+  position: absolute;
+  top: 100%;
+  left: 0; right: 0;
+  background: rgba(7,11,20,0.98);
+  border-bottom: 1px solid rgba(0,229,255,0.12);
+  padding: 0.75rem 1.25rem 1rem;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+.nav__links--open {
+  display: flex;
+}
+.nav__links li { width: 100%; }
+.nav__links .nav__link {
+  display: block;
+  padding: 0.55rem 0;
+  font-size: 0.95rem;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  width: 100%;
+}
+.nav__links .nav__link--cta {
+  margin-top: 0.5rem;
+  border: 1px solid rgba(0,229,255,0.35);
+  padding: 0.5rem 1rem;
+  text-align: center;
+  width: 100%;
+  border-radius: var(--radius-sm);
+  box-sizing: border-box;
+}
+.nav__links .lang-toggle { margin-top: 0.5rem; }
+
+/* =====================================================
+   13.6 Demo canvases — mobile & tablet responsive
+   ===================================================== */
+
+/* Mobile portrait (< 600px): redesign for narrow screens */
+@media (max-width: 599px) {
+  /* Taller canvas gives more room */
+  .demo-tile__canvas { aspect-ratio: 4 / 3; }
+
+  /* ---- Zapier: vertical flow ---- */
+  .demo-zap {
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+    gap: 5px;
+    padding: 8px 10px;
+  }
+  /* Hide horizontal arrows; vertical order implies flow */
+  .demo-zap__arrow { display: none; }
+  /* Show stack children side-by-side in a grid */
+  .demo-zap__stack {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+    height: 46px;
+  }
+  .demo-zap__stack .demo-zap__card {
+    position: static;
+    transform: none !important;
+    height: 100%;
+    padding: 6px 6px 6px 10px;
+  }
+  .demo-zap__title { font-size: 0.82rem; }
+  .demo-zap__sub   { font-size: 0.68rem; }
+
+  /* ---- BI dashboard: single-column charts ---- */
+  .demo-bi__charts    { grid-template-columns: 1fr; }
+  .demo-bi__bars      { display: none; }
+  .demo-bi__kpi-label { font-size: 0.58rem; }
+  .demo-bi__kpi-num   { font-size: 0.85rem; }
+
+  /* ---- Cloud migration: legible labels ---- */
+  .demo-mig__progress  { font-size: 0.62rem; }
+  .demo-mig__rack,
+  .demo-mig__svc       { font-size: 0.66rem; }
+  .demo-mig__box-label { font-size: 0.58rem; }
+}
+
+
+/* =====================================================
+   13.7 Mobile — XS tweaks (< 480px)
+   ===================================================== */
+@media (max-width: 479px) {
+  .container { padding-inline: 1rem; }
+  .section { padding-block: 3rem; }
+
+  .btn { padding: 0.65rem 1.1rem; font-size: 0.82rem; }
+
+  .service-card { padding: var(--space-4); }
+
+  .process__step-num { font-size: 3rem; opacity: 0.15; }
+
+  .demo-tile { padding: var(--space-3); }
+
+  .demo-n8n { transform: scale(0.78); transform-origin: center center; }
+}
+
+/* =====================================================
    14. Responsive — Tablet 768px+
    ===================================================== */
 @media (min-width: 768px) {
+  .nav__toggle { display: none; }
+  .nav__links {
+    display: flex !important;
+    flex-direction: row;
+    align-items: center;
+    gap: var(--space-4);
+    position: static;
+    background: transparent;
+    border: none;
+    padding: 0;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+  .nav__links li { width: auto; }
+  .nav__links .nav__link { padding: 0; font-size: 0.875rem; border-bottom: none; }
+  .nav__links .nav__link--cta { margin-top: 0; padding: 0.42rem 1.1rem; width: auto; }
+  .nav__links .lang-toggle { margin-top: 0; }
+
   .nav__logo-full { display: inline; }
 
   .services__grid { grid-template-columns: repeat(2, 1fr); }
@@ -2392,7 +2518,6 @@ img, svg { display: block; max-width: 100%; }
   .demo-zap__card,
   .demo-zap__line,
   .demo-zap__line-svg,
-  .demo-zap__packet-svg,
   .demo-n8n__edge,
   .demo-n8n__node,
   .demo-n8n__badge,
@@ -2410,7 +2535,6 @@ img, svg { display: block; max-width: 100%; }
     animation: none !important;
   }
 
-  .demo-zap__packet-svg,
   .demo-bi__pipe-dot,
   .demo-mig__packet   { opacity: 0; }
   .demo-bi__line-path { stroke-dashoffset: 0; }

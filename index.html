@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-2BYDB9E2QE"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-2BYDB9E2QE');
+  </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Tunisian Automation Group — Automatisation des workflows, intégrations sur mesure et migration cloud pour les PME tunisiennes.">
@@ -11,7 +19,10 @@
   <meta property="og:url" content="https://tunisian-automation.com/">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="canonical" href="https://tunisian-automation.com/">
-  <title>Tunisian Automation Group — TAG</title>
+  <link rel="sitemap" type="application/xml" href="/sitemap.xml">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Tunisian Automation Group">
+  <title>Tunisian Automation Group — Automatisation &amp; Intégrations sur Mesure en Tunisie</title>
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,7 +33,7 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Organization",
+    "@type": ["Organization", "ProfessionalService"],
     "name": "Tunisian Automation Group",
     "alternateName": "TAG",
     "url": "https://tunisian-automation.com",
@@ -49,6 +60,9 @@
         <span class="nav__logo-tag">TAG</span>
         <span class="nav__logo-full">Tunisian Automation Group</span>
       </a>
+      <button class="nav__toggle" aria-label="Ouvrir le menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
       <ul class="nav__links" role="list">
         <li><a href="#services" class="nav__link" data-i18n="nav-services">Services</a></li>
         <li><a href="#demos" class="nav__link" data-i18n="nav-demos">Démos</a></li>
@@ -225,8 +239,6 @@
                     <path class="demo-zap__line-svg" d="M 20 50 L 20 70 L 38 70" />
                     <polygon class="demo-zap__head-svg" points="32,24 40,30 32,36" />
                     <polygon class="demo-zap__head-svg" points="32,64 40,70 32,76" />
-                    <circle class="demo-zap__packet-svg demo-zap__packet-svg--top" r="2.5" />
-                    <circle class="demo-zap__packet-svg demo-zap__packet-svg--bot" r="2.5" />
                   </svg>
                 </div>
                 <div class="demo-zap__stack">
@@ -1004,6 +1016,23 @@
     }
 
     applyLang(currentLang);
+
+    /* ── Mobile nav toggle ── */
+    var navToggle = document.querySelector('.nav__toggle');
+    var navLinks = document.querySelector('.nav__links');
+    if (navToggle && navLinks) {
+      navToggle.addEventListener('click', function () {
+        var open = navToggle.getAttribute('aria-expanded') === 'true';
+        navToggle.setAttribute('aria-expanded', String(!open));
+        navLinks.classList.toggle('nav__links--open');
+      });
+      navLinks.querySelectorAll('a').forEach(function (link) {
+        link.addEventListener('click', function () {
+          navToggle.setAttribute('aria-expanded', 'false');
+          navLinks.classList.remove('nav__links--open');
+        });
+      });
+    }
 
     /* ── Nav shrink on scroll ── */
     var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
