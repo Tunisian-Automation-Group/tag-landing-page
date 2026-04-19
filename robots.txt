@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://tunisian-automation.com/sitemap.xml
