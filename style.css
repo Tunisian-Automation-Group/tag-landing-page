@@ -256,6 +256,24 @@ img, svg { display: block; max-width: 100%; }
   border-color: rgba(0,229,255,0.6);
 }
 
+.lang-toggle {
+  background: transparent;
+  border: 1px solid rgba(0,229,255,0.25);
+  color: var(--color-text-muted);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  padding: 4px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: var(--transition);
+  line-height: 1;
+}
+.lang-toggle:hover {
+  border-color: var(--color-cyan);
+  color: var(--color-cyan);
+}
+
 /* =====================================================
    7. Hero
    ===================================================== */
