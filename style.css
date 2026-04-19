@@ -887,32 +887,32 @@ img, svg { display: block; max-width: 100%; }
   0%, 35%  { transform: translate(2px, 50px); opacity: 0; }
   40%      { opacity: 1; }
   65%      { transform: translate(20px, 50px); opacity: 1; }
-  85%      { transform: translate(38px, 20px); opacity: 1; }
+  85%      { transform: translate(38px, 30px); opacity: 1; }
   90%      { opacity: 0; }
-  100%     { transform: translate(38px, 20px); opacity: 0; }
+  100%     { transform: translate(38px, 30px); opacity: 0; }
 }
 @keyframes demo-zap-svg-bot {
   0%, 35%  { transform: translate(2px, 50px); opacity: 0; }
   40%      { opacity: 1; }
   65%      { transform: translate(20px, 50px); opacity: 1; }
-  85%      { transform: translate(38px, 80px); opacity: 1; }
+  85%      { transform: translate(38px, 70px); opacity: 1; }
   90%      { opacity: 0; }
-  100%     { transform: translate(38px, 80px); opacity: 0; }
+  100%     { transform: translate(38px, 70px); opacity: 0; }
 }
 
 .demo-zap__stack {
   flex: 1;
   min-width: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
+  position: relative;
   align-self: stretch;
-  justify-content: center;
 }
 .demo-zap__stack .demo-zap__card {
-  flex: 0 0 auto;
+  position: absolute;
+  left: 0; right: 0;
   padding: 6px 6px 6px 10px;
 }
+.demo-zap__card--3 { top: 30%; transform: translateY(-50%); }
+.demo-zap__card--4 { top: 70%; transform: translateY(-50%); }
 
 /* =====================================================
    TILE 2 — n8n node canvas
@@ -955,12 +955,12 @@ img, svg { display: block; max-width: 100%; }
   position: absolute;
   display: flex;
   align-items: center;
-  gap: 6px;
-  padding: 5px 7px 5px 9px;
+  gap: 4px;
+  padding: 3px 5px 3px 7px;
   background: rgba(13,21,38,0.95);
   border: 1px solid rgba(0,229,255,0.35);
   border-radius: 6px;
-  font-size: 0.62rem;
+  font-size: 0.58rem;
   box-shadow: 0 4px 12px rgba(0,0,0,0.4);
   animation: demo-n8n-exec 5s ease-in-out infinite;
 }
@@ -973,11 +973,11 @@ img, svg { display: block; max-width: 100%; }
   border-radius: 6px 0 0 6px;
 }
 
-.demo-n8n__node--trigger { top: 43%; left: 4%;  transform: translateY(-50%); animation-delay: 0s; }
-.demo-n8n__node--b1      { top: 8%;  left: 38%; animation-delay: 0.6s; }
-.demo-n8n__node--b2      { top: 43%; left: 38%; transform: translateY(-50%); animation-delay: 0.75s; }
-.demo-n8n__node--b3      { top: 76%; left: 38%; animation-delay: 0.9s; }
-.demo-n8n__node--merge   { top: 43%; right: 4%; transform: translateY(-50%); animation-delay: 1.6s; }
+.demo-n8n__node--trigger { top: 43%; left: 2%;  transform: translateY(-50%); animation-delay: 0s; }
+.demo-n8n__node--b1      { top: 16%; left: 37%; animation-delay: 0.6s; }
+.demo-n8n__node--b2      { top: 43%; left: 32%; transform: translateY(-50%); animation-delay: 0.75s; }
+.demo-n8n__node--b3      { top: 76%; left: 37%; animation-delay: 0.9s; }
+.demo-n8n__node--merge   { top: 43%; right: 2%; transform: translateY(-50%); animation-delay: 1.6s; }
 
 @keyframes demo-n8n-exec {
   0%, 35%, 100% {
@@ -992,14 +992,14 @@ img, svg { display: block; max-width: 100%; }
 
 .demo-n8n__icon {
   flex-shrink: 0;
-  width: 18px; height: 18px;
+  width: 14px; height: 14px;
   border-radius: 3px;
   background: rgba(0,229,255,0.1);
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.demo-n8n__icon svg { width: 12px; height: 12px; }
+.demo-n8n__icon svg { width: 10px; height: 10px; }
 
 .demo-n8n__text {
   display: flex;
@@ -1010,13 +1010,13 @@ img, svg { display: block; max-width: 100%; }
 .demo-n8n__title {
   font-family: var(--font-display);
   font-weight: 700;
-  font-size: 0.68rem;
+  font-size: 0.60rem;
   color: var(--color-text-primary);
   white-space: nowrap;
 }
 .demo-n8n__sub {
   font-family: var(--font-mono);
-  font-size: 0.52rem;
+  font-size: 0.46rem;
   color: var(--color-text-muted);
   letter-spacing: 0.02em;
   white-space: nowrap;
