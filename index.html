@@ -3,11 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Tunisian Automation Group — Workflow automation, cloud migration, and AI integration for forward-thinking businesses.">
+  <meta name="description" content="Tunisian Automation Group — Workflow automation, bespoke integrations, and cloud migration for small and mid-sized Tunisian businesses. Founder-led, trilingual (AR/FR/EN).">
   <meta name="theme-color" content="#070B14">
   <meta property="og:title" content="Tunisian Automation Group">
-  <meta property="og:description" content="Automate the Future. Engineer the Change.">
+  <meta property="og:description" content="Workflow automation, bespoke integrations, and cloud migration — built in Tunisia, for Tunisian businesses.">
   <meta property="og:type" content="website">
+  <meta property="og:url" content="https://tunisian-automation.com/">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- TODO: add og:image once hero asset is ready -->
+  <link rel="canonical" href="https://tunisian-automation.com/">
   <title>Tunisian Automation Group — TAG</title>
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,6 +19,71 @@
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700&family=Space+Mono:wght@400;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Tunisian Automation Group",
+    "alternateName": "TAG",
+    "url": "https://tunisian-automation.com",
+    "description": "Workflow automation, bespoke integrations, and cloud migration for small and mid-sized Tunisian businesses.",
+    "foundingDate": "2026",
+    "founder": { "@type": "Person", "name": "Yassine Dkhaili" },
+    "address": { "@type": "PostalAddress", "addressCountry": "TN", "addressLocality": "Tunis" },
+    "areaServed": { "@type": "Country", "name": "Tunisia" },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "email": "yassine.dkhaili@tunisian-automation.com",
+      "contactType": "sales",
+      "availableLanguage": ["Arabic", "French", "English"]
+    }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Who do you work with?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Small and mid-sized businesses based in Tunisia. We're deliberately not taking on work outside Tunisia — it's a focus choice that keeps our pricing, timezones, and working languages realistic for local clients." }
+      },
+      {
+        "@type": "Question",
+        "name": "How much does this cost?",
+        "acceptedAnswer": { "@type": "Answer", "text": "There's no fixed price — scope drives cost. The discovery call is always free. After we understand your bottleneck, you get a written proposal with a fixed scope and a fixed fee before anything starts." }
+      },
+      {
+        "@type": "Question",
+        "name": "How long until I see results?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Most workflow automations start delivering ROI within 30–60 days. Larger cloud migrations are phased over 2–6 months so your team is never stuck waiting on a big-bang cutover." }
+      },
+      {
+        "@type": "Question",
+        "name": "What if we don't have anyone technical on our team?",
+        "acceptedAnswer": { "@type": "Answer", "text": "That's exactly the point. Every engagement includes training and documentation so your team owns the tools without needing an engineer on staff. We stay on until the handoff is solid." }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you work in Arabic and French, or only English?",
+        "acceptedAnswer": { "@type": "Answer", "text": "All three. Meetings, documents, training — whichever is easiest for your team. Most of our work is done in a mix of Arabic and French, with English for technical artifacts." }
+      },
+      {
+        "@type": "Question",
+        "name": "What platforms and tools do you work with?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Workflow automation: n8n, Zapier, Power Automate. Bespoke builds: Python, Node.js, TypeScript, Postgres. Cloud: AWS, Azure, GCP — or a clean self-hosted setup when cloud isn't the right answer. AI layer: OpenAI, Anthropic, LangChain, Copilot. We pick the tool that fits your constraints — not the one we have the most invoices from." }
+      },
+      {
+        "@type": "Question",
+        "name": "What if the project doesn't work out?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Paid work only starts after the free discovery call and a scoped, written proposal. If the scope turns out wrong, we adjust before you commit. No long lock-ins, no surprise renewals." }
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
 
@@ -29,6 +98,7 @@
         <li><a href="#services" class="nav__link">Services</a></li>
         <li><a href="#about" class="nav__link">About</a></li>
         <li><a href="#process" class="nav__link">Process</a></li>
+        <li><a href="#faq" class="nav__link">FAQ</a></li>
         <li><a href="#contact" class="nav__link nav__link--cta">Book a Call</a></li>
       </ul>
     </div>
@@ -45,14 +115,15 @@
 
       <div class="container hero__inner">
         <div class="hero__content">
-          <p class="hero__overline">// NORTH AFRICA'S AUTOMATION LEADER</p>
+          <p class="hero__overline">// TUNIS-BASED AUTOMATION STUDIO</p>
           <h1 class="hero__headline">
             Automate<br>the Future.<br>
             <span class="hero__headline--accent">Engineer<br>the Change.</span>
           </h1>
           <p class="hero__body">
-            We help businesses eliminate bottlenecks, migrate to the cloud, and
-            unlock the power of AI — without disrupting what already works.
+            We help Tunisian businesses automate workflows, build bespoke integrations
+            where off-the-shelf won't do, and migrate to the cloud — with AI where it
+            helps, without it where it doesn't.
           </p>
           <div class="hero__ctas">
             <a href="#contact" class="btn btn--primary">
@@ -83,9 +154,9 @@
             </div>
             <div class="hero__terminal-body">
               <p class="hero__terminal-line hero__terminal-line--1"><span class="t-green">✓</span> Workflow mapped &amp; digitized</p>
-              <p class="hero__terminal-line hero__terminal-line--2"><span class="t-cyan">→</span> Cloud migration: 94% complete</p>
-              <p class="hero__terminal-line hero__terminal-line--3"><span class="t-violet">◆</span> AI model deployed to prod</p>
-              <p class="hero__terminal-line hero__terminal-line--4"><span class="t-green">✓</span> Productivity gain: <strong>+312%</strong></p>
+              <p class="hero__terminal-line hero__terminal-line--2"><span class="t-cyan">→</span> Cloud migration in progress</p>
+              <p class="hero__terminal-line hero__terminal-line--3"><span class="t-violet">◆</span> AI assistant connected</p>
+              <p class="hero__terminal-line hero__terminal-line--4"><span class="t-green">✓</span> Team trained &amp; handed off</p>
             </div>
           </div>
         </div>
@@ -117,11 +188,26 @@
               </div>
             </div>
             <h3 class="service-card__title">Workflow Automation</h3>
-            <p class="service-card__body">We map, digitize, and automate your manual business processes — from document handling to approval chains — using platforms tailored to your operations.</p>
+            <p class="service-card__body">We map your manual processes and rebuild them on proven platforms like n8n, Zapier, and Power Automate — with AI layered in where it actually moves the needle (and left out where it doesn't).</p>
             <ul class="service-card__features" role="list">
-              <li>Process mapping &amp; intelligent design</li>
-              <li>RPA &amp; trigger-based automation</li>
-              <li>ERP / CRM system integration</li>
+              <li>Process mapping &amp; trigger-based automation</li>
+              <li>ERP / CRM / inbox / sheets integration</li>
+              <li>Optional AI: assistants, extraction, routing</li>
+            </ul>
+          </article>
+
+          <article class="service-card service-card--violet">
+            <div class="service-card__glow" aria-hidden="true"></div>
+            <div class="service-card__accent"></div>
+            <div class="service-card__icon" aria-hidden="true">
+              <div class="icon-bespoke" aria-hidden="true"></div>
+            </div>
+            <h3 class="service-card__title">Bespoke Builds</h3>
+            <p class="service-card__body">When off-the-shelf tools hit a wall, we build. Custom integrations, internal dashboards, and data plumbing that connects the tools your team already uses — coded from scratch only where it makes sense.</p>
+            <ul class="service-card__features" role="list">
+              <li>Custom APIs &amp; system-to-system connectors</li>
+              <li>Internal dashboards &amp; admin tools</li>
+              <li>Data pipelines &amp; reporting flows</li>
             </ul>
           </article>
 
@@ -135,36 +221,11 @@
               </div>
             </div>
             <h3 class="service-card__title">Cloud Migration</h3>
-            <p class="service-card__body">We architect and execute seamless migrations to AWS, Azure, and GCP — ensuring zero-downtime transitions with robust security and optimized cost structures.</p>
+            <p class="service-card__body">We plan and execute your move to AWS, Azure, or GCP — or a well-configured self-hosted setup if that's the right fit. Zero-downtime, locked-down, and sized to your actual budget.</p>
             <ul class="service-card__features" role="list">
-              <li>Infrastructure assessment &amp; planning</li>
-              <li>Lift-and-shift + cloud-native refactoring</li>
-              <li>Cost optimization &amp; monitoring setup</li>
-            </ul>
-          </article>
-
-          <article class="service-card service-card--violet">
-            <div class="service-card__glow" aria-hidden="true"></div>
-            <div class="service-card__accent"></div>
-            <div class="service-card__icon" aria-hidden="true">
-              <div class="icon-ai">
-                <div class="icon-ai__node icon-ai__node--center"></div>
-                <div class="icon-ai__node icon-ai__node--tl"></div>
-                <div class="icon-ai__node icon-ai__node--tr"></div>
-                <div class="icon-ai__node icon-ai__node--bl"></div>
-                <div class="icon-ai__node icon-ai__node--br"></div>
-                <div class="icon-ai__line icon-ai__line--tl"></div>
-                <div class="icon-ai__line icon-ai__line--tr"></div>
-                <div class="icon-ai__line icon-ai__line--bl"></div>
-                <div class="icon-ai__line icon-ai__line--br"></div>
-              </div>
-            </div>
-            <h3 class="service-card__title">AI Integration</h3>
-            <p class="service-card__body">We embed practical AI into your existing tools — chatbots, predictive analytics, document intelligence — delivering measurable ROI without requiring AI expertise on your team.</p>
-            <ul class="service-card__features" role="list">
-              <li>AI readiness assessment</li>
-              <li>Custom model integration (LLMs, NLP, vision)</li>
-              <li>Continuous performance monitoring</li>
+              <li>Infrastructure assessment &amp; sizing</li>
+              <li>Lift-and-shift or cloud-native refactor</li>
+              <li>Self-hosted / on-prem option when cloud isn't the answer</li>
             </ul>
           </article>
 
@@ -182,28 +243,28 @@
             TAG was founded by engineers and technologists who grew up at the crossroads of Mediterranean ingenuity and global technology. We bring world-class software engineering discipline together with North African entrepreneurial drive.
           </p>
           <p class="about__body">
-            We work with companies across the MENA region and Europe — from ambitious startups to established enterprises — helping them move faster, scale smarter, and compete globally.
+            We work exclusively with small and mid-sized businesses based in Tunisia — from ambitious startups to established operators — helping them move faster, scale smarter, and adopt the tools global teams already rely on.
           </p>
           <div class="about__proofs">
             <div class="about__proof">
               <div class="about__proof-icon about__proof-icon--cyan" aria-hidden="true"></div>
               <div>
-                <strong>Deep technical expertise</strong>
-                <p>Senior engineers with backgrounds at top-tier global tech companies.</p>
+                <strong>Global-grade engineering practices</strong>
+                <p>We build to the same standards the big cloud shops use, adapted for Tunisian teams.</p>
               </div>
             </div>
             <div class="about__proof">
               <div class="about__proof-icon about__proof-icon--gold" aria-hidden="true"></div>
               <div>
-                <strong>Regional fluency</strong>
-                <p>We understand the MENA business landscape — culturally and technically.</p>
+                <strong>Trilingual by default</strong>
+                <p>Arabic, French, English. No translation friction, no meetings lost in interpretation.</p>
               </div>
             </div>
             <div class="about__proof">
               <div class="about__proof-icon about__proof-icon--violet" aria-hidden="true"></div>
               <div>
-                <strong>End-to-end ownership</strong>
-                <p>We don't hand off half-finished work. We own the outcome.</p>
+                <strong>Founder-led</strong>
+                <p>Yassine personally leads every engagement. No junior handoffs, no account-manager relay.</p>
               </div>
             </div>
           </div>
@@ -214,19 +275,19 @@
             <div class="about__stack-card about__stack-card--cyan">
               <span class="about__stack-label">// AUTOMATION</span>
               <div class="about__stack-tools">
-                <span>Make</span><span>n8n</span><span>UiPath</span><span>Zapier</span>
+                <span>n8n</span><span>Zapier</span><span>Power Automate</span>
+              </div>
+            </div>
+            <div class="about__stack-card about__stack-card--violet">
+              <span class="about__stack-label">// AI LAYER</span>
+              <div class="about__stack-tools">
+                <span>OpenAI</span><span>Anthropic</span><span>LangChain</span><span>Copilot</span>
               </div>
             </div>
             <div class="about__stack-card about__stack-card--gold">
               <span class="about__stack-label">// CLOUD</span>
               <div class="about__stack-tools">
-                <span>AWS</span><span>Azure</span><span>GCP</span>
-              </div>
-            </div>
-            <div class="about__stack-card about__stack-card--violet">
-              <span class="about__stack-label">// AI</span>
-              <div class="about__stack-tools">
-                <span>OpenAI</span><span>Anthropic</span><span>LangChain</span>
+                <span>AWS</span><span>Azure</span><span>GCP</span><span>Self-hosted</span>
               </div>
             </div>
           </div>
@@ -274,6 +335,70 @@
             <h3 class="process__step-title">Deploy</h3>
             <p class="process__step-body">Phased implementation with full team training. We stay on until your team owns the outcome.</p>
           </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ FAQ ═══ -->
+    <section class="faq" id="faq" aria-labelledby="faq-heading">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-overline">// COMMON QUESTIONS</p>
+          <h2 id="faq-heading" class="section-title">Before You Book.</h2>
+          <p class="section-body">Straight answers to what most people ask on the first call.</p>
+        </div>
+
+        <div class="faq__list">
+
+          <details class="faq__item">
+            <summary class="faq__q">Who do you work with?</summary>
+            <div class="faq__a">
+              <p>Small and mid-sized businesses based in Tunisia. We're deliberately not taking on work outside Tunisia — it's a focus choice that keeps our pricing, timezones, and working languages realistic for local clients.</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary class="faq__q">How much does this cost?</summary>
+            <div class="faq__a">
+              <p>There's no fixed price — scope drives cost. The discovery call is always free. After we understand your bottleneck, you get a written proposal with a fixed scope and a fixed fee before anything starts.</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary class="faq__q">How long until I see results?</summary>
+            <div class="faq__a">
+              <p>Most workflow automations start delivering ROI within 30–60 days. Larger cloud migrations are phased over 2–6 months so your team is never stuck waiting on a big-bang cutover.</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary class="faq__q">What if we don't have anyone technical on our team?</summary>
+            <div class="faq__a">
+              <p>That's exactly the point. Every engagement includes training and documentation so your team owns the tools without needing an engineer on staff. We stay on until the handoff is solid.</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary class="faq__q">Do you work in Arabic and French, or only English?</summary>
+            <div class="faq__a">
+              <p>All three. Meetings, documents, training — whichever is easiest for your team. Most of our work is done in a mix of Arabic and French, with English for technical artifacts.</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary class="faq__q">What platforms and tools do you work with?</summary>
+            <div class="faq__a">
+              <p>Workflow automation: n8n, Zapier, Power Automate. Bespoke builds: Python, Node.js, TypeScript, Postgres. Cloud: AWS, Azure, GCP — or a clean self-hosted setup when cloud isn't the right answer. AI layer: OpenAI, Anthropic, LangChain, Copilot. We pick the tool that fits your constraints — not the one we have the most invoices from.</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary class="faq__q">What if the project doesn't work out?</summary>
+            <div class="faq__a">
+              <p>Paid work only starts after the free discovery call and a scoped, written proposal. If the scope turns out wrong, we adjust before you commit. No long lock-ins, no surprise renewals.</p>
+            </div>
+          </details>
 
         </div>
       </div>
@@ -374,6 +499,7 @@
 
         <div class="booking__footer-meta">
           <span>📍 Tunis, Tunisia</span>
+          <span>🇹🇳 Tunisian clients only</span>
           <span>⚡ Response within 24 hours</span>
           <span>🔒 No spam, ever</span>
         </div>
@@ -394,6 +520,7 @@
         <a href="#services" class="footer__link">Services</a>
         <a href="#about" class="footer__link">About</a>
         <a href="#process" class="footer__link">Process</a>
+        <a href="#faq" class="footer__link">FAQ</a>
         <a href="#contact" class="footer__link">Contact</a>
       </nav>
       <div class="footer__right">
@@ -404,5 +531,42 @@
   </footer>
 
   <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+
+  <script>
+    (function () {
+      var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      // Nav shrink on scroll
+      var nav = document.querySelector('.nav');
+      var onScroll = function () {
+        if (window.scrollY > 40) nav.classList.add('nav--scrolled');
+        else nav.classList.remove('nav--scrolled');
+      };
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+
+      // Scroll-triggered reveals
+      var revealTargets = document.querySelectorAll(
+        '.service-card, .about__content > *, .about__stack-card, .process__step, .faq__item'
+      );
+      revealTargets.forEach(function (el) { el.classList.add('reveal'); });
+
+      if (reduceMotion || !('IntersectionObserver' in window)) {
+        revealTargets.forEach(function (el) { el.classList.add('is-revealed'); });
+        return;
+      }
+
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-revealed');
+            io.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+      revealTargets.forEach(function (el) { io.observe(el); });
+    })();
+  </script>
 </body>
 </html>
