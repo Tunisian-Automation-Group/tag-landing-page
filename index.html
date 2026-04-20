@@ -60,9 +60,6 @@
         <span class="nav__logo-tag">TAG</span>
         <span class="nav__logo-full">Tunisian Automation Group</span>
       </a>
-      <button class="nav__toggle" aria-label="Ouvrir le menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
       <ul class="nav__links" role="list">
         <li><a href="#services" class="nav__link" data-i18n="nav-services">Services</a></li>
         <li><a href="#demos" class="nav__link" data-i18n="nav-demos">Démos</a></li>
@@ -70,8 +67,13 @@
         <li><a href="#process" class="nav__link" data-i18n="nav-process">Processus</a></li>
         <li><a href="#faq" class="nav__link" data-i18n="nav-faq">FAQ</a></li>
         <li><a href="#contact" class="nav__link nav__link--cta" data-i18n="nav-cta">Réserver une consultation</a></li>
-        <li><button class="lang-toggle" id="langToggle" aria-label="Switch language">EN</button></li>
       </ul>
+      <div class="nav__end">
+        <button class="lang-toggle" id="langToggle" aria-label="Switch language">EN</button>
+        <button class="nav__toggle" aria-label="Ouvrir le menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </div>
   </nav>
 
@@ -989,7 +991,7 @@
     };
 
     /* ── Language switcher ── */
-    var currentLang = localStorage.getItem('tag-lang') || 'fr';
+    var currentLang = 'fr';
 
     function applyLang(lang) {
       var t = i18n[lang];
@@ -1005,7 +1007,6 @@
       var btn = document.getElementById('langToggle');
       if (btn) btn.textContent = lang === 'fr' ? 'EN' : 'FR';
       currentLang = lang;
-      localStorage.setItem('tag-lang', lang);
     }
 
     var langBtn = document.getElementById('langToggle');
