@@ -2396,7 +2396,6 @@ img, svg { display: block; max-width: 100%; }
 
   .demo-tile { padding: var(--space-3); }
 
-  .demo-n8n { transform: scale(0.58); transform-origin: center center; }
   .demo-n8n__badge { display: none; }
   .demo-n8n__title { font-size: 0.52rem; }
   .demo-n8n__sub   { font-size: 0.40rem; }
