@@ -2262,6 +2262,13 @@ img, svg { display: block; max-width: 100%; }
 /* =====================================================
    13.5 Mobile nav hamburger
    ===================================================== */
+.nav__end {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
 .nav__toggle {
   display: flex;
   flex-direction: column;
@@ -2326,7 +2333,6 @@ img, svg { display: block; max-width: 100%; }
   border-radius: var(--radius-sm);
   box-sizing: border-box;
 }
-.nav__links .lang-toggle { margin-top: 0.5rem; }
 
 /* =====================================================
    13.6 Demo canvases — mobile & tablet responsive
@@ -2337,31 +2343,29 @@ img, svg { display: block; max-width: 100%; }
   /* Taller canvas gives more room */
   .demo-tile__canvas { aspect-ratio: 4 / 3; }
 
-  /* ---- Zapier: vertical flow ---- */
+  /* ---- Zapier: compact horizontal with visible arrows ---- */
   .demo-zap {
-    flex-direction: column;
-    align-items: stretch;
-    justify-content: center;
-    gap: 5px;
-    padding: 8px 10px;
+    flex-direction: row;
+    align-items: center;
+    gap: 3px;
+    padding: 8px 6px;
   }
-  /* Hide horizontal arrows; vertical order implies flow */
-  .demo-zap__arrow { display: none; }
-  /* Show stack children side-by-side in a grid */
-  .demo-zap__stack {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 5px;
-    height: 46px;
+  .demo-zap__arrow { display: flex; }
+  .demo-zap__arrow--straight { width: 12px; }
+  .demo-zap__arrow--split    { width: 16px; margin: 2px 0; }
+  .demo-zap__card {
+    padding: 3px 3px 3px 7px;
   }
+  .demo-zap__icon { width: 14px; height: 14px; }
+  .demo-zap__icon svg { width: 10px; height: 10px; }
+  .demo-zap__title { font-size: 0.56rem; }
+  .demo-zap__sub   { font-size: 0.44rem; }
   .demo-zap__stack .demo-zap__card {
-    position: static;
-    transform: none !important;
-    height: 100%;
-    padding: 6px 6px 6px 10px;
+    position: absolute;
+    transform: translateY(-50%);
+    height: auto;
+    padding: 3px 3px 3px 7px;
   }
-  .demo-zap__title { font-size: 0.82rem; }
-  .demo-zap__sub   { font-size: 0.68rem; }
 
   /* ---- BI dashboard: single-column charts ---- */
   .demo-bi__charts    { grid-template-columns: 1fr; }
@@ -2392,7 +2396,10 @@ img, svg { display: block; max-width: 100%; }
 
   .demo-tile { padding: var(--space-3); }
 
-  .demo-n8n { transform: scale(0.78); transform-origin: center center; }
+  .demo-n8n { transform: scale(0.58); transform-origin: center center; }
+  .demo-n8n__badge { display: none; }
+  .demo-n8n__title { font-size: 0.52rem; }
+  .demo-n8n__sub   { font-size: 0.40rem; }
 }
 
 /* =====================================================
@@ -2415,7 +2422,6 @@ img, svg { display: block; max-width: 100%; }
   .nav__links li { width: auto; }
   .nav__links .nav__link { padding: 0; font-size: 0.875rem; border-bottom: none; }
   .nav__links .nav__link--cta { margin-top: 0; padding: 0.42rem 1.1rem; width: auto; }
-  .nav__links .lang-toggle { margin-top: 0; }
 
   .nav__logo-full { display: inline; }
 
