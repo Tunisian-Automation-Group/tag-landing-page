@@ -1739,11 +1739,8 @@ img, svg { display: block; max-width: 100%; }
     overflow: visible;
   }
   .hero__headline {
-    font-size: clamp(1.7rem, 8vw, 2.6rem);
+    font-size: clamp(1.5rem, 7.5vw, 2.2rem);
     word-break: break-word;
-  }
-  .hero__headline--accent {
-    font-size: 0.78em;
   }
   .hero__body {
     font-size: 0.95rem;
@@ -1761,14 +1758,9 @@ img, svg { display: block; max-width: 100%; }
     box-sizing: border-box;
   }
 
-  /* Outcome card: revert to normal flow on mobile */
+  /* Hide outcome card on mobile */
   .hero__terminal {
-    position: static;
-    width: 100%;
-    max-width: 100%;
-    margin-top: var(--space-4);
-    bottom: auto;
-    right: auto;
+    display: none;
   }
 
   .hero__below-title {
