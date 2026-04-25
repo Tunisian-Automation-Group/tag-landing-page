@@ -1742,6 +1742,9 @@ img, svg { display: block; max-width: 100%; }
     font-size: clamp(1.7rem, 8vw, 2.6rem);
     word-break: break-word;
   }
+  .hero__headline--accent {
+    font-size: 0.78em;
+  }
   .hero__body {
     font-size: 0.95rem;
     max-width: 100%;
@@ -1791,7 +1794,7 @@ img, svg { display: block; max-width: 100%; }
   /* Savings */
   .savings__grid { grid-template-columns: 1fr; }
   .savings__stat { font-size: 2.2rem; }
-  .savings__cta { margin-top: var(--space-8); }
+  .savings__cta { margin-top: 0; }
   .savings__cta .btn {
     width: 100%;
     text-align: center;
@@ -1810,9 +1813,27 @@ img, svg { display: block; max-width: 100%; }
   .faq__grid { grid-template-columns: 1fr; }
 
   /* Booking */
-  .booking__card { grid-template-columns: 1fr; }
-  .booking__profile { border-right: none; border-bottom: 1px solid var(--color-border); }
+  .booking {
+    overflow: visible;
+    padding-block: var(--space-10);
+  }
+  .booking__card {
+    grid-template-columns: 1fr;
+    overflow: visible;
+    max-width: 100%;
+  }
+  .booking__profile {
+    border-right: none;
+    border-bottom: 1px solid var(--color-border);
+    padding: var(--space-6) var(--space-4);
+  }
+  .booking__action {
+    padding: var(--space-6) var(--space-4);
+  }
   .booking__footer-meta { flex-direction: column; align-items: center; gap: var(--space-3); }
+  .booking__subtitle { font-size: 0.92rem; }
+  .booking__pill { white-space: normal; }
+  .btn--booking { font-size: 0.9rem; padding: 0.9rem 1.2rem; }
 
   /* Footer */
   .footer__inner { flex-direction: column; text-align: center; }
