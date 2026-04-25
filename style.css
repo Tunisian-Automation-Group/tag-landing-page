@@ -358,7 +358,7 @@ img, svg { display: block; max-width: 100%; }
   font-size: 1.1rem;
   color: var(--color-text-muted);
   max-width: 44ch;
-  margin-bottom: var(--space-6);
+  margin-bottom: 0;
   animation: fadeSlideUp 0.9s var(--ease-out-expo) 0.38s both;
   line-height: 1.8;
 }
@@ -379,15 +379,29 @@ img, svg { display: block; max-width: 100%; }
   animation: fadeSlideUp 0.9s var(--ease-out-expo) 0.28s both;
 }
 
-/* Outcome card — replaces dark terminal */
+/* Paragraph row under the headline */
+.hero__below-title {
+  margin-top: var(--space-6);
+  margin-bottom: var(--space-6);
+}
+
+/* Outcome card — fixed to bottom-right corner of hero */
 .hero__terminal {
-  width: 100%;
-  max-width: 380px;
+  position: absolute;
+  bottom: var(--space-8);
+  right: var(--space-8);
+  width: 300px;
+  max-width: 300px;
+  margin-top: 0;
+  margin-bottom: 0;
+  z-index: 2;
   background: #FFFFFF;
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
   overflow: hidden;
   box-shadow: 0 8px 40px rgba(0,0,0,0.08), 0 2px 8px rgba(0,0,0,0.04);
+  display: flex;
+  flex-direction: column;
 }
 
 .hero__terminal-bar {
@@ -418,6 +432,8 @@ img, svg { display: block; max-width: 100%; }
   display: flex;
   flex-direction: column;
   gap: 0;
+  flex: 1;
+  justify-content: space-evenly;
 }
 
 .hero__terminal-line {
@@ -815,6 +831,91 @@ img, svg { display: block; max-width: 100%; }
 .demo-tile--violet .demo-result { background: rgba(124,58,237,0.07); color: #6d28d9; border: 1px solid rgba(124,58,237,0.18); }
 .demo-tile--emerald .demo-result { background: rgba(5,150,105,0.07); color: #047857; border: 1px solid rgba(5,150,105,0.18); }
 .demo-tile--gold   .demo-result { background: rgba(217,119,6,0.07);  color: #b45309; border: 1px solid rgba(217,119,6,0.18); }
+
+/* =====================================================
+   8b. Savings / ROI
+   ===================================================== */
+.savings {
+  background: var(--color-bg);
+  padding-block: var(--space-16);
+}
+
+.savings__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-5);
+  margin-top: var(--space-10);
+}
+
+.savings__card {
+  background: #FFFFFF;
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6) var(--space-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.savings__card:hover {
+  box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+  transform: translateY(-3px);
+}
+.savings__card--time  { border-top: 4px solid var(--color-cyan); }
+.savings__card--money { border-top: 4px solid var(--color-emerald); }
+.savings__card--roi   { border-top: 4px solid var(--color-violet); }
+.savings__card--docs  { border-top: 4px solid var(--color-gold); }
+
+.savings__icon {
+  font-size: 2rem;
+  line-height: 1;
+  margin-bottom: var(--space-1);
+}
+
+.savings__stat {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 800;
+  line-height: 1;
+  color: var(--color-text-primary);
+}
+.savings__card--time  .savings__stat { color: var(--color-cyan); }
+.savings__card--money .savings__stat { color: var(--color-emerald); }
+.savings__card--roi   .savings__stat { color: var(--color-violet); }
+.savings__card--docs  .savings__stat { color: var(--color-gold); }
+
+.savings__stat-label {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.savings__desc {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  line-height: 1.7;
+  margin-top: var(--space-2);
+}
+
+.savings__cta {
+  margin-top: var(--space-16);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-4);
+  text-align: center;
+}
+.savings__cta-text {
+  font-size: 1.05rem;
+  color: var(--color-text-muted);
+  max-width: 48ch;
+}
+
+@media (min-width: 768px) {
+  .savings__grid { grid-template-columns: repeat(4, 1fr); }
+}
 
 /* =====================================================
    9. About
@@ -1617,6 +1718,12 @@ img, svg { display: block; max-width: 100%; }
 /* =====================================================
    14. Responsive — Tablet 768px+
    ===================================================== */
+@media (max-width: 767px) {
+  .hero__below-title {
+    grid-template-columns: 1fr;
+  }
+}
+
 @media (min-width: 768px) {
   .nav__toggle { display: none; }
   .nav__links {
