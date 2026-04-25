@@ -1723,15 +1723,24 @@ img, svg { display: block; max-width: 100%; }
   /* Hero */
   .hero {
     min-height: auto;
+    height: auto;
     padding-top: 64px;
-    padding-bottom: 2rem;
+    padding-bottom: 3rem;
+    overflow: visible;
+    align-items: flex-start;
   }
   .hero__inner {
-    padding-block: var(--space-8);
-    gap: var(--space-6);
+    padding-block: var(--space-6);
+    gap: var(--space-5);
+    width: 100%;
+  }
+  .hero__content {
+    width: 100%;
+    overflow: visible;
   }
   .hero__headline {
     font-size: clamp(1.7rem, 8vw, 2.6rem);
+    word-break: break-word;
   }
   .hero__body {
     font-size: 0.95rem;
@@ -1740,10 +1749,13 @@ img, svg { display: block; max-width: 100%; }
   .hero__ctas {
     flex-direction: column;
     align-items: stretch;
+    width: 100%;
   }
   .hero__ctas .btn {
     text-align: center;
     justify-content: center;
+    width: 100%;
+    box-sizing: border-box;
   }
 
   /* Outcome card: revert to normal flow on mobile */
@@ -1752,6 +1764,8 @@ img, svg { display: block; max-width: 100%; }
     width: 100%;
     max-width: 100%;
     margin-top: var(--space-4);
+    bottom: auto;
+    right: auto;
   }
 
   .hero__below-title {
