@@ -22,24 +22,32 @@ Pushes go to `github.com:Tunisian-Automation-Group/tag-landing-page` via SSH as 
 These rules exist because TAG's founder currently works at a German AI consultancy serving EU clients. The site is positioned so there is **no competitive overlap**:
 
 1. **Tunisia-only scope.** The site says "Tunisian clients only" / "exclusively small and mid-sized businesses based in Tunisia". Do not reintroduce EU, MENA, or international targeting.
-2. **No AI-consultancy framing.** AI is a *layer* inside Workflow Automation, not a standalone pillar or headline offering. Do not add phrases like "AI transformation", "AI strategy", or "bespoke AI".
-3. **Bespoke Builds ≠ bespoke AI.** The pillar is about custom integrations, dashboards, and data plumbing. Do not list "AI agents" or "LLM-powered workflows" under this pillar.
-4. **No Azure OpenAI anywhere.** Azure as a cloud platform is fine. Azure OpenAI is the employer's stack — keep it off the site.
-5. **No fake metrics or superlatives.** No client-count stats, no productivity-gain numbers, no "leader" / "best" claims. Company has no clients yet. Capability claims only.
+2. **IDP only — no consultancy framing.** TAG does Intelligent Document Processing (IDP): extract data from documents, structure it, push it to ERP/SAP/Excel. Do not add workflow automation, web development, cloud migration, or AI-strategy services.
+3. **No Azure OpenAI anywhere.** Azure OpenAI is the employer's stack — keep it off the site.
+4. **No fake metrics or superlatives.** No client-count stats, no "leader" / "best" claims. Company has no clients yet. Stats must be framed as "estimates based on results at similar companies."
 
 ## Service pillars (canonical list)
 
-1. **Workflow Automation** — n8n, Zapier, Power Automate; AI where it helps
-2. **Bespoke Builds** — Python/Node/TS/Postgres; custom APIs, dashboards, data pipelines
-3. **Cloud Migration** — AWS, Azure, GCP, or self-hosted
+TAG does one thing: **Intelligent Document Processing (IDP)**
 
-**Tools explicitly removed — do not re-add:** Make, UiPath.
+Document types handled:
+1. **Factures & Comptabilité** — PDF and scanned invoices, debit/credit notes, bank statements
+2. **Contrats & Documents Légaux** — Supplier/client contracts, NDAs, amendments
+3. **Logistique & Commerce** — Purchase orders, delivery notes, customs documents
+4. **RH & Documents Internes** — Pay slips, HR records, internal forms
+
+Integration targets: SAP, ERP, Excel, API REST.
+AI/extraction stack: Python, OpenAI, Claude, OCR.
+Supported formats: PDF, JPEG, PNG, Word, Email.
+
+**Do not re-add:** workflow automation (n8n, Zapier), web development, cloud migration.
 
 ## Design system
 
-- Dark Cyber-Maghreb theme. Colors tokenised in `style.css` section 1.
+- Professional blue/navy theme. Colors tokenised in `style.css` section 1.
+- Primary: `--color-cyan: #1D5BE0` (electric blue), `--color-violet: #4F46E5` (indigo), `--color-gold: #D97706` (amber), `--color-emerald: #0D9488` (teal).
 - Fonts: Syne (display), Space Grotesk (body), Space Mono (mono) — via Google Fonts.
-- Per-pillar accent color: cyan (Automation), violet (Bespoke), gold (Cloud).
+- Per-document-type accent: blue (Invoices), indigo (Contracts), teal (Logistics), amber (HR).
 
 ## Accessibility & motion
 
