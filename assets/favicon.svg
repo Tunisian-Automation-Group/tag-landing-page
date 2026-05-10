@@ -1,10 +1,33 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
-  <rect width="64" height="64" rx="12" fill="#070B14"/>
-  <text x="50%" y="54%" dominant-baseline="middle" text-anchor="middle" font-family="sans-serif" font-weight="800" font-size="28" fill="url(#g)">TAG</text>
   <defs>
-    <linearGradient id="g" x1="0" y1="0" x2="64" y2="0" gradientUnits="userSpaceOnUse">
+    <linearGradient id="g" x1="10" y1="32" x2="54" y2="32" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#00E5FF"/>
+      <stop offset="100%" stop-color="#7B2FFF"/>
+    </linearGradient>
+    <linearGradient id="bar" x1="10" y1="0" x2="54" y2="0" gradientUnits="userSpaceOnUse">
       <stop offset="0%" stop-color="#00E5FF"/>
       <stop offset="100%" stop-color="#7B2FFF"/>
     </linearGradient>
   </defs>
+
+  <!-- Background -->
+  <rect width="64" height="64" rx="12" fill="#070B14"/>
+
+  <!-- Accent bar at top -->
+  <rect x="10" y="10" width="44" height="3" rx="1.5" fill="url(#bar)"/>
+
+  <!-- TAG text — smaller size with generous padding -->
+  <text
+    x="32" y="36"
+    text-anchor="middle"
+    dominant-baseline="middle"
+    font-family="Arial Black, Arial, Helvetica, sans-serif"
+    font-weight="900"
+    font-size="21"
+    letter-spacing="2"
+    fill="url(#g)"
+  >TAG</text>
+
+  <!-- Accent bar at bottom -->
+  <rect x="10" y="51" width="44" height="3" rx="1.5" fill="url(#bar)"/>
 </svg>
