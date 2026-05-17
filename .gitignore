@@ -1,0 +1,6 @@
+# Local-only contributor docs — never publish
+CLAUDE.md
+.claude/
+
+# OS / editor cruft
+.DS_Store
